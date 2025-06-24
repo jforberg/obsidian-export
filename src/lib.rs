@@ -701,6 +701,7 @@ impl<'a> Exporter<'a> {
 
         if path.is_none() {
             // TODO: Extract into configurable function.
+            /*
             eprintln!(
                 "Warning: Unable to find embedded note\n\tReference: '{}'\n\tSource: '{}'\n",
                 note_ref
@@ -708,6 +709,7 @@ impl<'a> Exporter<'a> {
                     .unwrap_or_else(|| context.current_file().to_str().unwrap()),
                 context.current_file().display(),
             );
+            */
             return Ok(vec![]);
         }
 
@@ -784,6 +786,7 @@ impl<'a> Exporter<'a> {
 
         if target_file.is_none() {
             // TODO: Extract into configurable function.
+            /*
             eprintln!(
                 "Warning: Unable to find referenced note\n\tReference: '{}'\n\tSource: '{}'\n",
                 reference
@@ -791,6 +794,7 @@ impl<'a> Exporter<'a> {
                     .unwrap_or_else(|| context.current_file().to_str().unwrap()),
                 context.current_file().display(),
             );
+            */
             let dummy_link_tag = Tag::Link {
                 link_type: pulldown_cmark::LinkType::Inline,
                 dest_url: CowStr::from(""),
